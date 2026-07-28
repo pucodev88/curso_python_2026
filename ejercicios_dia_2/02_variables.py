@@ -53,6 +53,3 @@ print(type(valor_numerico_string))
 ## valores no permitidos en python
 
 # camelCase
-
-def sumarNumeros():
-    
