@@ -6,6 +6,7 @@ numeros = range(5)
 
 # range(hasta) --> inicia en 0 y termina antes del valor indicado
 secuencia = range(11)
+print(secuencia)
 lista_secuencia = list(secuencia)
 print(lista_secuencia)
 

@@ -1,6 +1,15 @@
+import math
+import os
+
+os.system('cls')
 # TUPLAS
 
-estudiante = ("Ana", 25, "Programación")
+var = 10
+raiz_cuadrada = math.sqrt(var)
+print(f"RAIZ CUADRADA {raiz_cuadrada}")
+
+estudiante = ("Ana", 25, "Programación") #Forma recomendada
+#estudiante = "Ana", 25, "Programación"
 
 #se pueden crear con parentesis o sin parentesis, ejemplo
 calificaciones = (10.00, 6.13, 8.5) 
@@ -11,10 +20,14 @@ calificaciones = 10.00, 6.13, 8.5
 
 # Las tuplas no son MUTABLES
 asignaturas = ("Matemática", "Programación", "Inglés")
+print(asignaturas[1])
+
 #asignaturas[1] = "Python"
 # Error de tipo: TypeError
 
 # Longitud con len
+longitud = len(asignaturas)
+print(longitud)
 
 # Obtener una parte de la tupla. Podemos usar slicing o rebanada
     #[desde:hasta] el hasta se omite
@@ -33,7 +46,7 @@ print(type(asignatura2))
 
 numeros_naturales = (1, 3, 5, 1, 3, 1)
                    # 0, 1, 2, 3, 4, 5
-
+print("Veces que se repite el 5:",numeros_naturales.count(5))
 # Desempaquetado de tuplas. El desempaquetado permite 
 # guardar cada elemento de una tupla en una variable diferente
 # Debe existir la misma cantidad de variables y de elementos en la tupla
@@ -43,8 +56,7 @@ estudiante = ("Ana", 18, "Python")
             
 nombre, edad, materia = estudiante
 # 0      1       2    
-
-
+print("NOMBRE: ", nombre)
 #Ingnorar un valor al desempaquetar
 estudiante = ("Ana", 25, "Programación")
 

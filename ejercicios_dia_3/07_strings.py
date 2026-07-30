@@ -1,3 +1,6 @@
+import os
+os.system('cls')
+
 # Strings: Indexación, longitud y métodos básicos
 nombre = "María Pérez"
 #           M a r í a   P é r e z
@@ -66,15 +69,15 @@ print("INDICE ENCONTRADO: ",universidad.find('o'))
 numero_caracteres = universidad.count("")
 print("NUMERO DE CARACTERES: ", numero_caracteres)
 
-
-
 # count --> cuenta caracteres
 # startswitch  --> verifica si una cadena empieza con un texto o caracter que definamos
     # retorna un valor booleano
 # endswith  --> verifica si la cadena termina con el texto o caracter que definamos
     # retorna un valor booleano
 correo = "docente@universidad.edu.ec"
+print("MÉTODO startswitch",correo.startswith("d"))
 
+print("MÉTODO endswitch: ", correo.endswith(".ec"))
 #Se pueden combinar para validar ambas condiciones:
 #correo = input("Ingrese su correo: ").strip().lower()
 es_valido = correo.startswith("docente") and correo.endswith("ec") # retorna booleano
@@ -82,14 +85,34 @@ es_valido = correo.startswith("docente") and correo.endswith("ec") # retorna boo
 
 # Operador in --> comprueba si un texto está dentro de otro texto
 correo = "docente@universidad.edu.ec"
+si_esta_dentro = "universidad" in correo
+print(f"Si esta dentro {si_esta_dentro}")
+
 
 #Además se puede usar not in
+no_esta_dentro = "politecnica" not in correo
+print(f"No está dentro: {no_esta_dentro}")  # True
 
 
 #Ejercicio: Crea un programa que solicite el correo de un docente y muestre:
 # Usuario: docente
 # Dominio: universidad.edu.ec
 # Correo institucional: True
+
+correo = "ajm@unl.edu.ec"
+dividir_correo = correo.split("@") # ["ajm", "unl.edu.ec"]
+print("Division correo: ", dividir_correo)
+
+#es_institucional = correo.endswith(".edu.ec")
+es_institucional = "edu.ec" in correo
+
+usuario = dividir_correo[0] #ajm
+dominio = dividir_correo[1] #unl.edu.ec
+
+
+print(f"Usuario: {usuario}")
+print(f"Dominio: {dominio}")
+print(f"Correo institucional: {es_institucional}")
 
 # TAREA ESTUDIANTES
 '''
