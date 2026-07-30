@@ -8,8 +8,11 @@ while True:
     
     canal = int(canal) 
     
-    if 1 <= canal <= 11: 
-        break 
-    
-    print("El canal está fuera del rango permitido") 
     print(f"Canal seleccionado: {canal}")
+    
+    if 1 <= canal <= 11: # canal >= 1 and canal <=11
+        break
+    elif canal>= 11:
+         print("El canal está fuera del rango permitido") 
+    
+    

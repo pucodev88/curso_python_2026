@@ -2,7 +2,7 @@
 
 # Permiten ejecutar instrucciones según el resultado de una condición. Por ejemplo:
 
-latencia = float(input("Ingrese la latencia en milisegundos(ms)"))
+latencia = float(input("Ingrese la latencia en milisegundos(ms)")) # 100
 
 if latencia < 50: 
     print("Conexión óptima") 

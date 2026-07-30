@@ -59,3 +59,13 @@ estudiante = {
 
 # Comprobar si una clave existe con in
 
+print(estudiante.values())
+estudiante.pop("edad")
+print(estudiante.items())
+print(len(estudiante))
+
+estudiante.update(
+    {"apellido": "Chicaiza"}
+)
+
+print(estudiante)

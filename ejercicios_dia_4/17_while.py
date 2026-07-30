@@ -6,7 +6,7 @@ while intentos < 3:
     if clave == "Admin123":
         print("Acceso autorizado")
         break
-    intentos = intentos + 1 # intentos += 1 
+    intentos+=1
     print('Clave incorrecta')
     
 ## Es importante modificar la variable que controla el ciclo para evitar ciclos infinitos.

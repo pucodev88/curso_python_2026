@@ -13,4 +13,12 @@ for medicion in mediciones:
 print(f"Mayor nivel registrado: {maximo} dBm")
 print(f"Menor nivel registrado: {minimo} dBm")
 
+
+
 # FUNCIONES max y min
+lista_numeros = [10, 100, 1000, 10000]
+mayor = max(lista_numeros)
+print(mayor)
+
+menor = min(lista_numeros)
+print(menor)

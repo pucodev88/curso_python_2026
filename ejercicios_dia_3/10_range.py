@@ -1,14 +1,16 @@
+import os 
+
+os.system('cls')
 # RANGE
 # range() genera una secuencia de números enteros. 
 # Se usa principalmente para repetir instrucciones con un ciclo for.
 
-numeros = range(5)
+range(0,5)
+print(range(0,5))
 
-# range(hasta) --> inicia en 0 y termina antes del valor indicado
-secuencia = range(11)
-print(secuencia)
-lista_secuencia = list(secuencia)
-print(lista_secuencia)
+secuencia_numeros = list(range(0,5))
+print(secuencia_numeros)
+
 
 #range(desde, hasta)
 
