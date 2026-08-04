@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-
 valores_x = [1, 2, 3, 4] 
 valores_y = [10, 15, 13, 20]
 
@@ -9,7 +8,6 @@ plt.xlabel("Eje X") # nombre del eje horizontal
 plt.ylabel("Eje Y") # nombre del eje vertical
 plt.grid(True) # Muestra una grilla o cuadrícula en el gráfico
 plt.show() # Presenta el gráfico en pantalla
-
 
 # Gráfico de líneas
 #Se utiliza para representar cambios a lo largo del tiempo.
@@ -93,7 +91,4 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-#   Una tendencia ascendente puede indicar que el consumo aumenta cuando
-#   aumenta la temperatura.
-#   Esto no demuestra automáticamente causalidad, 
-#   pero permite identificar relaciones visuales.
+

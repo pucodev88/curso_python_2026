@@ -1,0 +1,13 @@
+[
+    {
+        "fecha": "2026-08-01",
+        "temperatura": 18.5,
+        "humedad": 65
+    },
+    
+    {
+        "fecha": "2026-08-02",
+        "temperatura": 19.2,
+        "humedad": 60
+    }
+]

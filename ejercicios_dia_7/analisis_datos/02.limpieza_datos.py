@@ -1,9 +1,6 @@
-'''
-    LIMPIEZA DE DATOS
+    #LIMPIEZA DE DATOS
     
-'''
-
-# Valores faltantes
+    # Valores faltantes
 # Crear un DataFrame con valores faltantes
 import pandas as pd
 import numpy as np
@@ -23,6 +20,7 @@ original = pd.DataFrame(datos)
 original = original[["latencia_ms", "errores"]]
 
 dataframe_original = pd.DataFrame(original)
+df = pd.DataFrame(original)
 
 copia_1 = datos.copy()
 copia_2 = datos.copy()
@@ -78,47 +76,44 @@ print(dataframe_original)
 
 print("\n-----DATAFRAME COLUMNAS CON VALORES REEMPLAZADOS-----")
 print(dataframe_unido)
+    
+#***DATOS DUPLICADOS***
 
-'''
-***DATOS DUPLICADOS***
-
-Detectar filas duplicadas:
+#Detectar filas duplicadas:
 
 print(df.duplicated())
 
-Contarlas:
+##Contarlas:
 
 print(df.duplicated().sum())
 
-Eliminar duplicados:
+#Eliminar duplicados:
 
 df = df.drop_duplicates()
 
-Eliminar duplicados considerando una columna:
+#Eliminar duplicados considerando una columna:
 
 df = df.drop_duplicates(
     subset=["equipo"]
 )
 
-***CONVERSIÓN DE TIPOS DE DATOS***
+#***CONVERSIÓN DE TIPOS DE DATOS***
 
-Convertir una columna a entero:
+#Convertir una columna a entero:
 
 df["errores"] = df["errores"].astype(int)
 
-Convertir valores no válidos en nulos:
+#Convertir valores no válidos en nulos:
 
 df["latencia"] = pd.to_numeric(
     df["latencia"],
     errors="coerce"
 )
 
-Limpiar espacios:
+#Limpiar espacios:
 
 df["equipo"] = df["equipo"].str.strip()
 
-Convertir texto a mayúsculas:
+#Convertir texto a mayúsculas:
 
 df["equipo"] = df["equipo"].str.upper()
-
-'''

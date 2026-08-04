@@ -1,27 +1,18 @@
-import pandas as pd # pd es un alias 
+import pandas as pd 
 
-'''Instalar pandas:
-    python -m pip install pandas
-    
-'''
 def barra_espaciadora():
-    return print("=" * 100 + ">>>")
+    return print("=" * 80 + ">>>")
 
-# SERIES
-'''Una Series representa una columna de datos.'''
+barra_espaciadora()
+
+# SERIES 
 
 lista_temperaturas = [22, 21, 23, 24, 25, 26, 27]
 
 temperaturas = pd.Series(lista_temperaturas)
-
 print(temperaturas)
 
-print(temperaturas[0]) # primer elemento
-
-barra_espaciadora()
-
-# DataFrame
-'''Un DataFrame es una tabla formada por filas y columna.'''
+# Dataframes
 
 datos = { 
          "nombre": ["Router A", "Router B", "Router C"], 
@@ -30,11 +21,7 @@ datos = {
         }
 
 dataframe = pd.DataFrame(datos)
-print("Resultado conceptual de un DataFrame:")
 print(dataframe)
-
-# CREANDO un Dataframe
-barra_espaciadora()
 
 datos = { 
          "dispositivo": [ "Router principal", "Switch laboratorio", "Access Point" ], 
@@ -42,64 +29,52 @@ datos = {
          "latencia_ms": [15, 35, 82], 
          "errores": [0, 2, 7] 
         } 
-
-df = pd.DataFrame(datos) 
+print("\n")
+df = pd.DataFrame(datos)
 print(df)
 
-
-barra_espaciadora()
-# INSPECCIONAR UN DATAFRAME: Primeras filas y últimas filas
-print("\nPrimeras filas del DataFrame:")
+#Mostrar primeras filas
 print(df.head(2)) # Primeras 2 filas
 
 print("\nÚltimas filas del DataFrame:")
 print(df.tail(2)) # Últimas 2 filas
 
-print("\nCantidad de filas y columnas del DataFrame:")
+# Mostrar cantidad de filas y columnas
 print(df.shape) # Cantidad de filas y columnas
 
-print("Nombres de las columnas del DataFrame:")
-print(df.columns) # Nombres de las columnas
-
-barra_espaciadora()
-
-# Tipos de datos
 print("Tipos de datos:")
 print(df.dtypes) # Tipos de datos de cada columna
 
-# Informacion general
 print("\nInformación general del DataFrame:")
 print(df.info()) # Información general del DataFrame
-
-barra_espaciadora()
 
 #Estadísticas descriptivas
 print("\nEstadísticas descriptivas del DataFrame para analizar únicamente columnas numéricas:")
 print(df.describe())
 
-barra_espaciadora()
 
 print("\nEstadísticas descriptivas del DataFrame incluyendo columnas de texto:")
 ##Para incluir columnas de texto:
 print(df.describe(include="all"))
 
-# SELECCIONAR COLUMNAS
-barra_espaciadora()
 print("\nSeleccionar una columna del DataFrame:")
 print(df["dispositivo"]) # Selecciona la columna "dispositivo"
 
 print("\nSeleccionar varias columnas del DataFrame:" )
 print(df[["dispositivo", "latencia_ms"]]) # Selecciona las columnas "dispositivo" y "latencia_ms"
 
-barra_espaciadora()
 # SELECCIONAR FILAS
 print("\nSeleccionar una fila del DataFrame por índice:")
-print(df.loc[0]) # Selecciona la primera fila
+print(df.loc[2]) # Selecciona la última fila
 
+print("\n Seleccionar una celda")
+print(df.loc[0, "direccion_ip"]) # Selecciona la celda en la primera fila y columna "direccion_ip"
+
+
+'''
 print("\n Seleccionar una celda")
 print(df.loc[0, "direccion_ip"]) # Selecciona la celda en la primera fila y columna "direccion_ip"  
 
-'''
 Seleccionar filas y columnas:
 
 print(df.loc[0:1, ["dispositivo", "latencia_ms"]])
@@ -107,7 +82,6 @@ Selección por posición con iloc
 print(df.iloc[0])
 
 Seleccionar la primera fila y segunda columna:
-
 print(df.iloc[0, 1])
 
 Diferencia principal:
@@ -115,10 +89,8 @@ Diferencia principal:
 loc: trabaja con nombres de índices y columnas.
 iloc: trabaja con posiciones numéricas.
 
-'''
 
 barra_espaciadora()
-'''
 
 **FILTRAR REGISROS 
 
